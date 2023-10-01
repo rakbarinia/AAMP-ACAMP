@@ -1,8 +1,8 @@
 function [mindist, minind] = MP2(X,m)%
     %X:time series;  m: subsequence size
     
-    [dim, Nb]=size(X); 
-    s=Nb-m;
+    [dim, Nb]=size(X); % Nb is the time series length. 
+    s=Nb-m;  % m (subsequence length) should be smaller than NB.
     Dmin=realmax*ones(1,s);
     minind=ones(1,s);
 
