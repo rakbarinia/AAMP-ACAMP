@@ -82,5 +82,5 @@ function [mindist, minind] = MPz(X,m)%
   
     end
     s=sign(FFmin);
-    mindist= sqrt(2*m+2*s.*sqrt(s.*FFmin));%mindist returns the minimum distance of each subsequence to its most similar subsequence.
+    mindist=sqrt(2*m+2*s.*sqrt(s.*FFmin));%mindist returns the minimum distance of each subsequence to its most similar subsequence.
 end
