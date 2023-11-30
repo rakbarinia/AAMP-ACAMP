@@ -1,17 +1,20 @@
 function [mindist, minind] = MPz(X,m)%
-    %X: time series, m: subsequence length
-    
+    %X: time series, m: subsequence length  
     [dim, Nb]=size(X); 
     s=Nb-m;
     FFmin=realmax*ones(1,s);
     minind=ones(1,s);
     mm=1/m;
+    
+    %Initialization of arrays.
+    
     A1=sum(X(1:m));
     A21=sum(X(1:m).*X(1:m));
     x1=X(1);
     xm=X(1+m);
     B21=A21-x1^2+xm^2;    
     B1=A1-x1+xm;
+    
     for k=1:s-1
         A=A1;
         B=B1;
