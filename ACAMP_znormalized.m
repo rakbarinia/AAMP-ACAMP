@@ -1,5 +1,5 @@
 function [mindist, minind] = MPz(X,m)%
-    %X: time series, m: subsequence size
+    %X: time series, m: subsequence length
     
     [dim, Nb]=size(X); 
     s=Nb-m;
@@ -13,7 +13,6 @@ function [mindist, minind] = MPz(X,m)%
     B21=A21-x1^2+xm^2;    
     B1=A1-x1+xm;
     for k=1:s-1
-        
         A=A1;
         B=B1;
         A2=A21;
