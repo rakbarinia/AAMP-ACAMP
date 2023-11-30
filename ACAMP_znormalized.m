@@ -7,7 +7,6 @@ function [mindist, minind] = MPz(X,m)%
     mm=1/m;
     
     %Initialization of arrays.
-    
     A1=sum(X(1:m));
     A21=sum(X(1:m).*X(1:m));
     x1=X(1);
@@ -15,6 +14,7 @@ function [mindist, minind] = MPz(X,m)%
     B21=A21-x1^2+xm^2;    
     B1=A1-x1+xm;
     
+    %Incremental computation of z-normalized distance 
     for k=1:s-1
         A=A1;
         B=B1;
