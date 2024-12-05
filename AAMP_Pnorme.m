@@ -26,7 +26,7 @@ function [mindist, minind] = MPnorme(X,m,p)%
                 minind(i)=kplusi;
                 Dmin(i)=D;
             end
-            %I use the symmetry of D to avoid doing a second loop.
+            % We use the symmetry of D to avoid doing a second loop.
             if Dmin(kplusi)> D
                 minind(kplusi)=i;
                 Dmin(kplusi)=D;
